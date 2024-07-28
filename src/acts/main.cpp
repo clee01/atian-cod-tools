@@ -212,9 +212,9 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD ul_reason_for_call, LPVOID lpReserv
 int MainActs(int argc, const char* _argv[], HINSTANCE hInstance, int nShowCmd) {
 	// Key Auth Begin
 	// Freeing memory to prevent memory leak or memory scraping
-	std::string name = skCrypt("name").decrypt();
-	std::string ownerid = skCrypt("ownerid").decrypt();
-	std::string secret = skCrypt("secret").decrypt();
+	std::string name = skCrypt("OppEngine").decrypt();
+	std::string ownerid = skCrypt("aeGO0wU6dS").decrypt();
+	std::string secret = skCrypt("e24b6703926f5627e37b070eaabdceee5bd25a7f9ef3b5df67c981c6dad4ac06").decrypt();
 	std::string version = skCrypt("1.0").decrypt();
 	std::string url = skCrypt("https://keyauth.win/api/1.2/").decrypt(); // change if you're self-hosting
 	std::string path = skCrypt("").decrypt(); //optional, set a path if you're using the token validation setting
@@ -224,7 +224,7 @@ int MainActs(int argc, const char* _argv[], HINSTANCE hInstance, int nShowCmd) {
     name.clear(); ownerid.clear(); secret.clear(); version.clear(); url.clear();
     std::string consoleTitle = skCrypt("Loader - Built at:  ").decrypt() + compilation_date + " " + compilation_time;
     SetConsoleTitleA(consoleTitle.c_str());
-    std::cout << skCrypt("\n\n Connecting..");
+    std::cout << skCrypt("\n\n Connecting...");
     KeyAuthApp.init();
     if (!KeyAuthApp.response.success)
     {
