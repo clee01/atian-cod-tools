@@ -26,6 +26,10 @@
 *.a
 *.lib
 
+# Cancelled Some Compiled Static libraries
+!src/acts/library_x64.lib
+!src/acts/libcurl.lib
+
 # Executables
 *.exe
 *.out
